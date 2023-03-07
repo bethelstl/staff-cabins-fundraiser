@@ -1,3 +1,7 @@
+// Funds that have already been donated that Tithe.ly didn't record/include in the API
+const ALREADY_DONATED = 615;
+const EXISTING_DONORS = 1;
+
 const animateBar = () => {
     const bar = document.querySelector(".bar-fill-animation");
     bar.style.animation = "fillBar 5s";
@@ -31,6 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             let { goal_amount, total_pledged, num_donors, percent_pledged } = data.data;
 
+            total_pledged += ALREADY_DONATED;
+            num_donors += EXISTING_DONORS;
+            
             // Match up to $5,000
             if (total_pledged > 500000) total_pledged += 500000;
             else total_pledged *= 2;
