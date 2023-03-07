@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: auto;
+  padding: 10px 0 50px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+hr {
+  color: #656565;
+  width: 80%;
+  margin: 10px 0 10px 0;
+}
+
+a.pledge-now {
+  margin-top: 15px;
+  padding: 15px 0 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #007d04;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 80%;
+  text-align: center;
+}
+
+.campaign-info {
+  background-color: #e8e8e8;
+  width: 90vw;
+  border-radius: 10px;
+  position: relative;
+  bottom: 40px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.campaign-info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.campaign-info .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #636363;
+}
+
+.campaign-info .view-existing-pledge {
+  color: #636363;
+  margin-top: 5px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+
+main p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #636363;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  width: 90%;
+}
+
+@media only screen and (min-width: 680px) {
+  a.pledge-now {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
