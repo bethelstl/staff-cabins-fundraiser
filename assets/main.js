@@ -31,8 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             let { goal_amount, total_pledged, num_donors, percent_pledged } = data.data;
 
-            if (!isNaN(total_pledged)) pledgedAmount.innerText = `$${(total_pledged / 100).toFixed(2).toLocaleString()}`;
-            if (!isNaN(goal_amount)) goal.innerText = `Pledged of $${(goal_amount / 100).toLocaleString()} goal`;
+            // Match up to $4,000
+            if (total_pledged > 400000) total_pledged += 400000;
+            else total_pledged *= 2;
+
+            percent_pledged = (total_pledged / goal_amount) * 100;
+
+            if (!isNaN(total_pledged)) pledgedAmount.innerText = `$${(total_pledged / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            if (!isNaN(goal_amount)) goal.innerText = `Pledged of $${(goal_amount / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} goal`;
             if (!isNaN(num_donors)) pledgedDonors.innerText = num_donors.toLocaleString();
             if (!isNaN(percent_pledged)) {
                 barFill.style.width = `${percent_pledged}%`;
