@@ -22,8 +22,116 @@ body {
           align-items: center;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes reveal {
+  from {
+    background-color: black;
+  }
+  tp {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes reveal {
+  from {
+    background-color: black;
+  }
+  tp {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@-webkit-keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.container {
+  background-color: #e8e8e8;
+  width: 90vw;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.container .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #636363;
+}
+
+.container .view-existing-pledge {
+  color: #636363;
+  margin-top: 5px;
+}
+
 .hero {
-  background-color: rgba(0, 0, 0, 0.8);
   height: auto;
   padding: 10px 0 50px 0;
   width: 100%;
@@ -36,6 +144,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: reveal 5s;
+          animation: reveal 5s;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .hero img {
@@ -43,6 +154,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: fadeIn 10s;
+          animation: fadeIn 10s;
 }
 
 hr {
@@ -62,6 +175,7 @@ a.pledge-now {
   font-weight: 600;
   width: 80%;
   text-align: center;
+  text-decoration: none;
 }
 
 .campaign-info {
@@ -104,6 +218,22 @@ a.pledge-now {
 .campaign-info .view-existing-pledge {
   color: #636363;
   margin-top: 5px;
+}
+
+.campaign-info .bar, .campaign-info .bar-fill, .campaign-info .bar-fill-animation {
+  height: 15px;
+  border-radius: 15px;
+}
+
+.campaign-info .bar {
+  width: 80%;
+  background-color: #bdbdbd;
+  margin: 10px 0 15px 0;
+}
+
+.campaign-info .bar-fill-animation {
+  width: 0%;
+  background-color: #007d04;
 }
 
 main {

@@ -16,6 +16,14 @@
 
         <!-- Import CSS -->
         <link rel="stylesheet" href="./assets/style.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="./assets/favicon.jpg" type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.jpg"
+            type="image/x-icon"
+        />
     </head>
     <body>
         <section class="hero">
@@ -30,18 +38,31 @@
                 Help us build a home away from home for our staff
             </p>
             <hr />
+            <div class="bar">
+                <div class="bar-fill" data-percent="100%">
+                    <div class="bar-fill-animation"></div>
+                </div>
+            </div>
             <div class="pledge-status">
-                <div class="donors-pledged">
+                <div class="money-pledged">
                     <h3>$0.00</h3>
-                    <p>Pledged of $15,000.00 goal</p>
+                    <p>Pledged of $15,000 goal</p>
                 </div>
                 <div class="donors-pledged">
                     <h3>0</h3>
                     <p>Pledges</p>
                 </div>
             </div>
-            <a class="pledge-now">Pledge Now</a>
-            <a class="view-existing-pledge">Or view your existing pledge</a>
+            <a
+                href="https://campaigns.tithely.com/dayspring-bible-camp/staff-cabins-2023/create-pledge"
+                class="pledge-now"
+                >Pledge Now</a
+            >
+            <a
+                href="https://campaigns.tithely.com/dayspring-bible-camp/staff-cabins-2023/login"
+                class="view-existing-pledge"
+                >Or view your existing pledge</a
+            >
         </section>
         <main>
             <h1>New Staff Cabin</h1>
@@ -89,7 +110,12 @@
                 advance for your generosity and support.
             </p>
 
-            <a class="pledge-now">Pledge Now</a>
+            <a
+                href="https://campaigns.tithely.com/dayspring-bible-camp/staff-cabins-2023/create-pledge"
+                class="pledge-now"
+                >Pledge Now</a
+            >
         </main>
     </body>
+    <script src="./assets/main.js"></script>
 </html>
