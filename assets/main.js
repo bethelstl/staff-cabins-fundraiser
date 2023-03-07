@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             let { goal_amount, total_pledged, num_donors, percent_pledged } = data.data;
 
-            // Match up to $4,000
-            if (total_pledged > 400000) total_pledged += 400000;
+            // Match up to $5,000
+            if (total_pledged > 500000) total_pledged += 500000;
             else total_pledged *= 2;
 
             percent_pledged = (total_pledged / goal_amount) * 100;
